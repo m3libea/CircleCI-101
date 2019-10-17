@@ -1,8 +1,20 @@
- version: 2
- jobs:
-   build:
-     docker:
-       - image: circleci/ruby:2.4.1
-     steps:
-       - checkout
-       - run: notacommand
+version: 2
+jobs:
+    one:
+        docker:
+          - image: circleci/ruby:2.4.1
+        steps:
+          - checkout
+          - run: echo "HelloCI"
+    two:
+        docker:
+          - image: circleci/ruby:2.4.1
+        steps:
+          - checkout
+          - run: echo "Hello World"
+workflows:
+  version: 2
+  one_and_two:
+    jobs:
+      - one
+      - two
