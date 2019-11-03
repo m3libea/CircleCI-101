@@ -1,4 +1,4 @@
 # circleci101
 Testing CircleCI
 
-Hello HelloWorld CI project
+HelloWorld CI project
